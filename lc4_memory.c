@@ -33,7 +33,6 @@ int add_to_list (row_of_memory** head,
 	/* if head==NULL, node created is the new head of the list! */
     if (*head == NULL) {
         *head = new_row;
-				new_row->address = address++;
         return 0;
     }
 	/* otherwise, traverse linked list until reach the right spot to insert this node */
@@ -67,15 +66,6 @@ row_of_memory* search_address (row_of_memory* head,
 	/* return head (works evenif list is empty or if "address" isn't found) */
 	return (head) ;
 }
-
-// // loop the memory linked list to find the node that has the address specified in argument
-// row_of_memory* find_row_with_address(row_of_memory * memory, int address) {
-//     while (memory) {
-//       if (memory-> address == address) {
-//         return memory;
-//       }
-//     }
-// }
 
 /*
  * search linked list by opcode field, returns node if found

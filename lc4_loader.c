@@ -72,7 +72,7 @@ int parse_file (FILE* my_obj_file, row_of_memory** memory) {
           printf("memory is %x\n", memory );
           printf("address is %x\n", address );
           printf("contents is %x\n", contents );
-          add_to_list(memory, address, contents);
+          add_to_list(memory, address++, contents);
           n--;
         }
       } else if (code == 0xc3b7) {
