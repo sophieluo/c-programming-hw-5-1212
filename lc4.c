@@ -44,7 +44,7 @@ int main (int argc, char** argv) {
 
 	/* step 5: call function: print_list() in lc4_memory.c 	*/
 	/*   TODO: call function 				*/
-
+	print_list(memory);
 
 	/* step 6: call function: delete_list() in lc4_memory.c */
 	/*   TODO: call function & check for errors		*/

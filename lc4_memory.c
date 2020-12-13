@@ -90,7 +90,7 @@ void print_list (row_of_memory* head )
 	/* make sure head isn't NULL */
     while (head != NULL){
 	/* print out a header */
-    printf("address = %x contents=%x label=%s\n", head->address, head->contents, head->label);
+    printf("address = %x contents=%x label=%s assembly=%s\n", head->address, head->contents, head->label, head->assembly);
 	/* traverse linked list, print contents of each node */
 		head = head->next;
 	}
