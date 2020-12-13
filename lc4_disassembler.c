@@ -18,6 +18,9 @@
 int reverse_assemble (row_of_memory* memory)
 {
 	// printf("in reverse_assemble, linked list is %x\n", memory->contents);
+
+	//loop through each node in linked list
+while (memory-> next != NULL) {
 	// convert hex to binary
 	char hex[16];
 	//use sprintf to convert unsigned int to string
@@ -27,6 +30,7 @@ int reverse_assemble (row_of_memory* memory)
 	//call hextobin in lc4_memory.c to convert hex to binary
 	char binary[16];
 	// printf("hex is %s\n", hex);
+	// int n = get_next_4_bytes(my_obj_file);
 	strcpy(binary, hextobin(hex));
 	// printf("binary is %s\n", binary);
 
@@ -249,9 +253,9 @@ int reverse_assemble (row_of_memory* memory)
 			printf("memory assembly is %s\n", memory->assembly);
 		}
 
+	// go to next node
+	memory = memory->next;
 
-
-	//call search_opcode in lc4_memory
-
+	} //end of while (n>0)
 	return 0 ;
 }
