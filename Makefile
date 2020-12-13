@@ -22,4 +22,4 @@ clean:
 	rm -rf *.o
 
 clobber: clean
-	rm -rf lc4_loader lc_4
+	rm -rf lc4_loader lc4 lc4_disassembler

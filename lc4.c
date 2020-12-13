@@ -40,7 +40,7 @@ int main (int argc, char** argv) {
 
 	/* step 4: call function: reverse_assemble() in lc4_disassembler.c */
 	/*   TODO: call function & check for errors		*/
-	reverse_assemble (&memory) ;
+	reverse_assemble (memory) ;
 
 	/* step 5: call function: print_list() in lc4_memory.c 	*/
 	/*   TODO: call function 				*/

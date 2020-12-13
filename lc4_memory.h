@@ -39,4 +39,7 @@ void print_list		      (row_of_memory* head ) ;
 
 int delete_list    	      (row_of_memory** head ) ;
 
+//declaration of other helper functions
+char* hextobin(char hex[]);
+
 #endif

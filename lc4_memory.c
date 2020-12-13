@@ -75,7 +75,7 @@ row_of_memory* search_opcode  (row_of_memory* head,
 {
 	/* traverse linked list until node is found with matching opcode
 	   AND "assembly" field of node is empty */
-    while ((head != NULL) && (head->contents!= opcode))
+    while ((head != NULL) && (head->contents != opcode))
 
 	/* return pointer to node in the list if item is found */
         head = head->next;
@@ -112,3 +112,179 @@ void print_list (row_of_memory* head )
 // 	// /* return 0 if no error, -1 for any errors that may arise */
 // 	// return 0 ;
 // }
+
+char* hextobin(char hex[])
+{
+	int n = strlen(hex);
+	//allocate memoery
+	char * binary = (char*)malloc(4*n*sizeof(char)+1);
+	int i=0;
+	int j = 0;
+	//set the set of string
+	binary[4*n] = '\0';
+
+	while(n--)
+	{
+		//use switch to cover all cases
+			switch(hex[i])
+			{
+					case '0':
+					printf("0000");
+					binary[j]='0';
+					binary[j+1] = '0';
+					binary[j+2] = '0';
+					binary[j+3] = '0';
+					break;
+					case '1':
+					printf("0001");
+					binary[j]='0';
+					binary[j+1] = '0';
+					binary[j+2] = '0';
+					binary[j+3] = '1';
+					break;
+					case '2':
+					printf("0010");
+					binary[j]='0';
+					binary[j+1] = '0';
+					binary[j+2] = '1';
+					binary[j+3] = '0';
+					break;
+					case '3':
+					printf("0011");
+					binary[j]='0';
+					binary[j+1] = '0';
+					binary[j+2] = '1';
+					binary[j+3] = '1';
+					break;
+					case '4':
+					printf("0100");
+					binary[j]='0';
+					binary[j+1] = '1';
+					binary[j+2] = '0';
+					binary[j+3] = '0';
+					break;
+					case '5':
+					printf("0101");
+					binary[j]='0';
+					binary[j+1] = '1';
+					binary[j+2] = '0';
+					binary[j+3] = '1';
+					break;
+					case '6':
+					printf("0110");
+					binary[j]='0';
+					binary[j+1] = '1';
+					binary[j+2] = '1';
+					binary[j+3] = '0';
+					break;
+					case '7':
+					printf("0111");
+					binary[j]='0';
+					binary[j+1] = '1';
+					binary[j+2] = '1';
+					binary[j+3] = '1';
+					break;
+					case '8':
+					printf("1000");
+					binary[j]='1';
+					binary[j+1] = '0';
+					binary[j+2] = '0';
+					binary[j+3] = '0';
+					break;
+					case '9':
+					printf("1001");
+					binary[j]='1';
+					binary[j+1] = '0';
+					binary[j+2] = '0';
+					binary[j+3] = '1';
+					break;
+					case 'A':
+					printf("1010");
+					binary[j]='1';
+					binary[j+1] = '0';
+					binary[j+2] = '1';
+					binary[j+3] = '0';
+					break;
+					case 'a':
+					printf("1010");
+					binary[j]='1';
+					binary[j+1] = '0';
+					binary[j+2] = '1';
+					binary[j+3] = '0';
+					break;
+					case 'B':
+					printf("1011");
+					binary[j]='1';
+					binary[j+1] = '0';
+					binary[j+2] = '1';
+					binary[j+3] = '1';
+					break;
+					case 'b':
+					printf("1011");
+					binary[j]='1';
+					binary[j+1] = '0';
+					binary[j+2] = '1';
+					binary[j+3] = '1';
+					break;
+					case 'C':
+					printf("1100");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '0';
+					binary[j+3] = '0';
+					break;
+					case 'c':
+					printf("1100");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '0';
+					binary[j+3] = '0';
+					break;
+					case 'D':
+					printf("1101");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '0';
+					binary[j+3] = '1';
+					break;
+					case 'd':
+					printf("1101");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '0';
+					binary[j+3] = '1';
+					break;
+					case 'E':
+					printf("1110");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '1';
+					binary[j+3] = '0';
+					break;
+					case 'e':
+					printf("1110");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '1';
+					binary[j+3] = '0';
+					break;
+					case 'F':
+					printf("1111");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '1';
+					binary[j+3] = '1';
+					break;
+					case 'f':
+					printf("1111");
+					binary[j]='1';
+					binary[j+1] = '1';
+					binary[j+2] = '1';
+					binary[j+3] = '1';
+					break;
+			}
+			i++;
+			j+=4;
+	}
+	return binary;
+}
